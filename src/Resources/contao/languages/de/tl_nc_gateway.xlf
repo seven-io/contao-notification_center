@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+    <file>
+        <body>
+            <trans-unit id="tl_nc_gateway.type.sms77">
+                <target>SMS (sms77)</target>
+            </trans-unit>
+            <trans-unit id="tl_nc_gateway.sms77_apiKey.0">
+                <target>sms77 API-Schlüssel</target>
+            </trans-unit>
+            <trans-unit id="tl_nc_gateway.sms77_apiKey.1">
+                <target>Bitte geben Sie den erforderlichen API-Schlüssel ein.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

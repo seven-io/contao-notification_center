@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4f696041-dca4-4fda-8875-fadf74ed173f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ContaoManager/Plugin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContaoManager/Plugin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ContaoNotificationCenterBundle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContaoNotificationCenterBundle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DependencyInjection/Configuration.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DependencyInjection/Configuration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DependencyInjection/Sms77NotificationCenterBundleExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DependencyInjection/Sms77NotificationCenterBundleExtension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventListener/SaveCallbackListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventListener/SaveCallbackListener.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NotificationCenter/Gateway/Sms77.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/NotificationCenter/Gateway/Sms77.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NotificationCenter/MessageDraft/Sms77SmsDraft.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/NotificationCenter/MessageDraft/Sms77SmsDraft.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/config/services.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/contao/Crypto.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/contao/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/contao/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/contao/dca/tl_form_field.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/contao/dca/tl_nc_gateway.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/contao/dca/tl_nc_gateway.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/contao/dca/tl_nc_language.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/contao/dca/tl_nc_language.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/contao/dca/tl_nc_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/contao/dca/tl_nc_message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/contao/languages/de/default.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/contao/languages/de/default.xlf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/contao/languages/de/tl_form_field.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/contao/languages/de/tl_form_field.xlf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/contao/languages/de/tl_nc_gateway.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/contao/languages/de/tl_nc_gateway.xlf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/contao/languages/de/tl_nc_language.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/contao/languages/de/tl_nc_language.xlf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/contao/languages/en/default.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/contao/languages/en/default.xlf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/contao/languages/en/tl_form_field.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/contao/languages/en/tl_form_field.xlf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/contao/languages/en/tl_nc_gateway.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/contao/languages/en/tl_nc_gateway.xlf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/contao/languages/en/tl_nc_language.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/contao/languages/en/tl_nc_language.xlf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/contao/library/Sms77/DCAHelper/NcLanguage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/contao/library/Sms77/Gateway/SMS.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/contao/library/Sms77/Hooks/Hooks.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/contao/library/Sms77/MessageDraft/SMSMessageDraft.php" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="23s312b136MOEmufHqOijw57f8y" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4f696041-dca4-4fda-8875-fadf74ed173f" name="Changes" comment="" />
+      <created>1642508748898</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1642508748898</updated>
+      <workItem from="1642508750298" duration="140000" />
+    </task>
+    <servers />
+  </component>
+</project>

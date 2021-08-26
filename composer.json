@@ -1,0 +1,43 @@
+{
+    "authors": [
+        {
+            "name": "sms77 e.K.",
+            "homepage": "https://www.sms77.io"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Sms77\\ContaoNotificationCenterBundle\\": "src/"
+        }
+    },
+    "conflict": {
+        "contao/core": "*",
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "description": "Contao 4 notification center plugin for sms77",
+    "extra": {
+        "contao-manager-plugin": "Sms77\\ContaoNotificationCenterBundle\\ContaoManager\\Plugin"
+    },
+    "keywords": [
+        "contao",
+        "gateway",
+        "notification_center",
+        "sms"
+    ],
+    "license": "MIT",
+    "name": "sms77/contao-notification_center-sms77",
+    "require": {
+        "php": ">=7.4",
+        "sms77/api": "v2.5.0",
+        "contao/core-bundle": "^4.9",
+        "giggsey/libphonenumber-for-php": "^7.0 || ^8.0",
+        "terminal42/notification_center": "^1.3.5",
+        "terminal42/service-annotation-bundle": "^1.1",
+        "symfony/http-kernel": "^4.4 || ^5.0",
+        "symfony/http-client": "^4.4. || ^5.0"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.2"
+    },
+    "type": "contao-bundle"
+}

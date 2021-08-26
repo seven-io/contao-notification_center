@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+    <file>
+        <body>
+            <trans-unit id="ERR.sms77_invalid_sender">
+                <target>Die Absenderkennung darf maximal 11 alphanumerische bzw. 16 numerische Zeichen enthalten.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+    <file>
+        <body>
+            <trans-unit id="tl_nc_language.sms77_sender_name.0">
+                <source>Sender identifier</source>
+            </trans-unit>
+            <trans-unit id="tl_nc_language.sms77_sender_name.1">
+                <source>Optionally enter a sender ID which max not exceed 11 alphanumeric or 16 numeric characters in length.</source>
+            </trans-unit>
+            <trans-unit id="tl_nc_language.sms77_recipient_number.0">
+                <source>Recipient phone number</source>
+            </trans-unit>
+            <trans-unit id="tl_nc_language.sms77_recipient_number.1">
+                <source>Please enter the recipient's phone number, e.g. +491771783130.</source>
+            </trans-unit>
+            <trans-unit id="tl_nc_language.sms77_text.0">
+                <source>Message</source>
+            </trans-unit>
+            <trans-unit id="tl_nc_language.sms77_text.1">
+                <source>Please enter the text. May not exceed 1520 characters in length.</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

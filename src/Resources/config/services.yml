@@ -1,0 +1,2 @@
+services:
+  Sms77\ContaoNotificationCenterBundle\EventListener\SaveCallbackListener: ~
