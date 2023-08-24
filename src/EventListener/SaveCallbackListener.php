@@ -2,12 +2,13 @@
 
 /**
  * @package   ContaoNotificationCenterBundle
- * @author    sms77 e.K. <support@sms77.io>
+ * @author    seven communications GmbH & Co. KG <support@seven.io>
  * @license   MIT
- * @copyright 2022-present sms77 e.K.
+ * @copyright 2022 sms77 e.K.
+ * @copyright 2023-present seven communications GmbH & Co. KG
  */
 
-namespace Sms77\ContaoNotificationCenterBundle\EventListener;
+namespace Seven\ContaoNotificationCenterBundle\EventListener;
 
 use Contao\StringUtil;
 use Contao\System;
@@ -16,11 +17,12 @@ use RuntimeException;
 
 class SaveCallbackListener {
     /**
-     * @Callback(table="tl_nc_language", target="fields.sms77_sender_name.save")
+     * @Callback(table="tl_nc_language", target="fields.seven_sender_name.save")
      * @param mixed $value
      * @return mixed
+     * @noinspection PhpUnused
      */
-    public function onSaveSms77SenderName($value) {
+    public function onSaveSevenSenderName($value) {
         if ('' !== $value) {
             if (false !== strpos($value, '##') || false !== strpos($value, '{{'))
                 return $value;
@@ -33,18 +35,19 @@ class SaveCallbackListener {
             }
 
             if ($valid) throw new RuntimeException(
-                $GLOBALS['TL_LANG']['ERR']['sms77_invalid_sender']);
+                $GLOBALS['TL_LANG']['ERR']['seven_invalid_sender']);
         }
 
         return $value;
     }
 
     /**
-     * @Callback(table="tl_nc_language", target="fields.sms77_recipient_number.save")
+     * @Callback(table="tl_nc_language", target="fields.seven_recipient_number.save")
      * @param mixed $value
      * @return mixed
+     * @noinspection PhpUnused
      */
-    public function onSaveSms77RecipientNumber($value) {
+    public function onSaveSevenRecipientNumber($value) {
         if ('' !== $value) foreach (StringUtil::trimsplit(',', $value) as $chunk) {
             if (false !== strpos($chunk, '##') || false !== strpos($chunk, '{{')) continue;
 
@@ -57,33 +60,36 @@ class SaveCallbackListener {
 
     /**
      * @Callback(table="tl_nc_gateway", target="config.onload")
+     * @noinspection PhpUnused
      */
     public function onLoadTable() {
-        if (!System::getContainer()->hasParameter('sms77.api_key')) return;
+        if (!System::getContainer()->hasParameter('seven.api_key')) return;
 
-        $GLOBALS['TL_DCA']['tl_nc_gateway']['fields']['sms77_apiKey']['eval']['disabled']
+        $GLOBALS['TL_DCA']['tl_nc_gateway']['fields']['seven_apiKey']['eval']['disabled']
             = true;
-        $GLOBALS['TL_DCA']['tl_nc_gateway']['fields']['sms77_apiKey']['eval']['mandatory']
+        $GLOBALS['TL_DCA']['tl_nc_gateway']['fields']['seven_apiKey']['eval']['mandatory']
             = false;
     }
 
     /**
-     * @Callback(table="tl_nc_gateway", target="fields.sms77_apiKey.load")
+     * @Callback(table="tl_nc_gateway", target="fields.seven_apiKey.load")
      * @param mixed $value
      * @return mixed
+     * @noinspection PhpUnused
      */
-    public function onLoadSms77ApiKey($value) {
+    public function onLoadSevenApiKey($value) {
         $container = System::getContainer();
-        return $container->hasParameter('sms77.api_key')
-            ? $container->getParameter('sms77.api_key') : $value;
+        return $container->hasParameter('seven.api_key')
+            ? $container->getParameter('seven.api_key') : $value;
     }
 
     /**
-     * @Callback(table="tl_nc_gateway", target="fields.sms77_apiKey.save")
+     * @Callback(table="tl_nc_gateway", target="fields.seven_apiKey.save")
      * @param mixed $value
      * @return mixed
+     * @noinspection PhpUnused
      */
-    public function onSaveSms77ApiKey($value) {
-        return System::getContainer()->hasParameter('sms77.api_key') ? '' : $value;
+    public function onSaveSevenApiKey($value) {
+        return System::getContainer()->hasParameter('seven.api_key') ? '' : $value;
     }
 }

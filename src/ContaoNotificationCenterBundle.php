@@ -1,12 +1,13 @@
 <?php declare(strict_types=1);
 /**
  * @package   ContaoNotificationCenterBundle
- * @author    sms77 e.K. <support@sms77.io>
+ * @author    seven communications GmbH & Co. KG <support@seven.io>
  * @license   MIT
- * @copyright 2022-present sms77 e.K.
+ * @copyright 2022 sms77 e.K.
+ * @copyright 2023-present seven communications GmbH & Co. KG
  */
 
-namespace Sms77\ContaoNotificationCenterBundle;
+namespace Seven\ContaoNotificationCenterBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

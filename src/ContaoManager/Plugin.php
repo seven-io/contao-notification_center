@@ -2,18 +2,19 @@
 
 /**
  * @package   ContaoNotificationCenterBundle
- * @author    sms77 e.K. <support@sms77.io>
+ * @author    seven communications GmbH & Co. KG <support@seven.io>
  * @license   MIT
- * @copyright 2022-present sms77 e.K.
+ * @copyright 2022 sms77 e.K.
+ * @copyright 2023-present seven communications GmbH & Co. KG
  */
 
-namespace Sms77\ContaoNotificationCenterBundle\ContaoManager;
+namespace Seven\ContaoNotificationCenterBundle\ContaoManager;
 
 use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
-use Sms77\ContaoNotificationCenterBundle\ContaoNotificationCenterBundle;
+use Seven\ContaoNotificationCenterBundle\ContaoNotificationCenterBundle;
 
 class Plugin implements BundlePluginInterface {
     /**

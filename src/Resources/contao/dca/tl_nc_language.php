@@ -2,15 +2,16 @@
 
 /**
  * @package   ContaoNotificationCenterBundle
- * @author    sms77 e.K. <support@sms77.io>
+ * @author    seven communications GmbH & Co. KG <support@seven.io>
  * @license   MIT
- * @copyright 2022-present sms77 e.K.
+ * @copyright 2022 sms77 e.K.
+ * @copyright 2023-present seven communications GmbH & Co. KG
  */
 
-$GLOBALS['TL_DCA']['tl_nc_language']['palettes']['sms77'] =
-    '{general_legend},language,fallback;{meta_legend},sms77_sender_name,sms77_recipient_number;{content_legend},sms77_text';
+$GLOBALS['TL_DCA']['tl_nc_language']['palettes']['seven'] =
+    '{general_legend},language,fallback;{meta_legend},seven_sender_name,seven_recipient_number;{content_legend},seven_text';
 
-$GLOBALS['TL_DCA']['tl_nc_language']['fields']['sms77_sender_name'] = [
+$GLOBALS['TL_DCA']['tl_nc_language']['fields']['seven_sender_name'] = [
     'eval' => [
         'decodeEntities' => true,
         'rgxp' => 'nc_tokens',
@@ -21,7 +22,7 @@ $GLOBALS['TL_DCA']['tl_nc_language']['fields']['sms77_sender_name'] = [
     'sql' => 'varchar(16) NOT NULL default \'\'',
 ];
 
-$GLOBALS['TL_DCA']['tl_nc_language']['fields']['sms77_recipient_number'] = [
+$GLOBALS['TL_DCA']['tl_nc_language']['fields']['seven_recipient_number'] = [
     'eval' => [
         'decodeEntities' => true,
         'mandatory' => true,
@@ -33,7 +34,7 @@ $GLOBALS['TL_DCA']['tl_nc_language']['fields']['sms77_recipient_number'] = [
     'sql' => 'varchar(255) NOT NULL default \'\'',
 ];
 
-$GLOBALS['TL_DCA']['tl_nc_language']['fields']['sms77_text'] = [
+$GLOBALS['TL_DCA']['tl_nc_language']['fields']['seven_text'] = [
     'eval' => [
         'decodeEntities' => true,
         'mandatory' => true,

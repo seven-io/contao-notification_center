@@ -1,23 +1,23 @@
 {
     "authors": [
         {
-            "name": "sms77 e.K.",
-            "email": "support@sms77.io",
-            "homepage": "https://www.sms77.io"
+            "name": "seven communications GmbH & Co. KG",
+            "email": "support@seven.io",
+            "homepage": "https://www.seven.io"
         }
     ],
     "autoload": {
         "psr-4": {
-            "Sms77\\ContaoNotificationCenterBundle\\": "src/"
+            "Seven\\ContaoNotificationCenterBundle\\": "src/"
         }
     },
     "conflict": {
         "contao/core": "*",
         "contao/manager-plugin": "<2.0 || >=3.0"
     },
-    "description": "Contao 4 notification center plugin for sms77",
+    "description": "Contao 4 notification center plugin for seven",
     "extra": {
-        "contao-manager-plugin": "Sms77\\ContaoNotificationCenterBundle\\ContaoManager\\Plugin"
+        "contao-manager-plugin": "Seven\\ContaoNotificationCenterBundle\\ContaoManager\\Plugin"
     },
     "keywords": [
         "contao",
@@ -26,7 +26,7 @@
         "sms"
     ],
     "license": "MIT",
-    "name": "sms77/contao-notification_center-sms77",
+    "name": "seven.io/contao-notification_center",
     "require": {
         "php": ">=7.4",
         "sms77/api": "v2.5.0",

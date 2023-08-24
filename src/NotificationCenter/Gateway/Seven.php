@@ -2,12 +2,13 @@
 
 /**
  * @package   ContaoNotificationCenterBundle
- * @author    sms77 e.K. <support@sms77.io>
+ * @author    seven communications GmbH & Co. KG <support@seven.io>
  * @license   MIT
- * @copyright 2022-present sms77 e.K.
+ * @copyright 2022 sms77 e.K.
+ * @copyright 2023-present seven communications GmbH & Co. KG
  */
 
-namespace Sms77\ContaoNotificationCenterBundle\NotificationCenter\Gateway;
+namespace Seven\ContaoNotificationCenterBundle\NotificationCenter\Gateway;
 
 use Contao\CoreBundle\Monolog\ContaoContext;
 use Contao\System;
@@ -19,7 +20,7 @@ use NotificationCenter\Model\Language as LanguageModel;
 use NotificationCenter\Model\Message as MessageModel;
 use Psr\Log\LoggerInterface;
 use Psr\Log\LogLevel;
-use Sms77\ContaoNotificationCenterBundle\NotificationCenter\MessageDraft\Sms77SmsDraft;
+use Seven\ContaoNotificationCenterBundle\NotificationCenter\MessageDraft\SevenSmsDraft;
 use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\DecodingExceptionInterface;
@@ -27,7 +28,7 @@ use Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\ServerExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 
-class Sms77 extends Base implements GatewayInterface, MessageDraftFactoryInterface {
+class Seven extends Base implements GatewayInterface, MessageDraftFactoryInterface {
     protected $objModel;
     protected LoggerInterface $logger;
     protected ?string $apiKey = null;
@@ -39,8 +40,8 @@ class Sms77 extends Base implements GatewayInterface, MessageDraftFactoryInterfa
         /** @var LoggerInterface $logger */
         $logger = $container->get('monolog.logger.contao');
         $this->logger = $logger;
-        if ($container->hasParameter('sms77.api_key'))
-            $this->apiKey = $container->getParameter('sms77.api_key');
+        if ($container->hasParameter('seven.api_key'))
+            $this->apiKey = $container->getParameter('seven.api_key');
     }
 
     public function createDraft(MessageModel $objMessage, array $arrTokens, $strLanguage = '') {
@@ -59,7 +60,7 @@ class Sms77 extends Base implements GatewayInterface, MessageDraftFactoryInterfa
             return null;
         }
 
-        return new Sms77SmsDraft($objMessage, $languageModel, $arrTokens);
+        return new SevenSmsDraft($objMessage, $languageModel, $arrTokens);
     }
 
     /**
@@ -76,14 +77,10 @@ class Sms77 extends Base implements GatewayInterface, MessageDraftFactoryInterfa
         $draft = $this->createDraft($message, $tokens, $language);
         if (null === $draft) return false;
 
-        $client = HttpClient::createForBaseUri('https://gateway.sms77.io/api/',
-            [
-                // 'auth_bearer' => $apiKey,
-            ]
-        );
+        $client = HttpClient::createForBaseUri('https://gateway.seven.io/api/');
 
         $this->logger->log(LogLevel::DEBUG,
-            sprintf('sms77 API Key: %s', $apiKey), []);
+            sprintf('seven API Key: %s', $apiKey), []);
 
         $success = true;
         foreach ($draft->getRecipients() as $recipient) {
@@ -115,6 +112,6 @@ class Sms77 extends Base implements GatewayInterface, MessageDraftFactoryInterfa
     }
 
     protected function getApiKey(): string {
-        return $this->apiKey ?: $this->objModel->sms77_apiKey;
+        return $this->apiKey ?: $this->objModel->seven_apiKey;
     }
 }

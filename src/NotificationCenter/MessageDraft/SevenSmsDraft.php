@@ -2,12 +2,13 @@
 
 /**
  * @package   ContaoNotificationCenterBundle
- * @author    sms77 e.K. <support@sms77.io>
+ * @author    seven communications GmbH & Co. KG <support@seven.io>
  * @license   MIT
- * @copyright 2022-present sms77 e.K.
+ * @copyright 2022 sms77 e.K.
+ * @copyright 2023-present seven communications GmbH & Co. KG
  */
 
-namespace Sms77\ContaoNotificationCenterBundle\NotificationCenter\MessageDraft;
+namespace Seven\ContaoNotificationCenterBundle\NotificationCenter\MessageDraft;
 
 use Contao\Controller;
 use Contao\CoreBundle\Monolog\ContaoContext;
@@ -23,14 +24,17 @@ use NotificationCenter\Model\Message as MessageModel;
 use Psr\Log\LoggerInterface;
 use Psr\Log\LogLevel;
 
-class Sms77SmsDraft implements MessageDraftInterface {
+class SevenSmsDraft implements MessageDraftInterface {
     protected LanguageModel $languageModel;
     protected LoggerInterface $logger;
     protected MessageModel $messageModel;
     protected array $tokens = [];
 
     public function __construct(
-        MessageModel $messageModel, LanguageModel $languageModel, array $tokens) {
+        MessageModel $messageModel,
+        LanguageModel $languageModel,
+        array $tokens
+    ) {
         $this->messageModel = $messageModel;
         $this->languageModel = $languageModel;
         $this->tokens = $tokens;
@@ -42,7 +46,7 @@ class Sms77SmsDraft implements MessageDraftInterface {
 
     public function getFrom(): ?string {
         return HasteStringUtil::recursiveReplaceTokensAndTags(
-            $this->languageModel->sms77_sender_name,
+            $this->languageModel->seven_sender_name,
             $this->tokens,
             HasteStringUtil::NO_TAGS | HasteStringUtil::NO_EMAILS
             | HasteStringUtil::NO_BREAKS
@@ -52,7 +56,7 @@ class Sms77SmsDraft implements MessageDraftInterface {
     public function getRecipients(): array {
         // Replaces tokens first so that tokens can contain a list of recipients.
         $recipients = HasteStringUtil::recursiveReplaceTokensAndTags(
-            $this->languageModel->sms77_recipient_number,
+            $this->languageModel->seven_recipient_number,
             $this->tokens,
             HasteStringUtil::NO_TAGS | HasteStringUtil::NO_EMAILS
             | HasteStringUtil::NO_BREAKS
@@ -86,7 +90,7 @@ class Sms77SmsDraft implements MessageDraftInterface {
     public function getText(): string {
         return Controller::convertRelativeUrls(
             HasteStringUtil::recursiveReplaceTokensAndTags(
-                $this->languageModel->sms77_text, $this->tokens, HasteStringUtil::NO_TAGS
+                $this->languageModel->seven_text, $this->tokens, HasteStringUtil::NO_TAGS
             ), '', true);
     }
 

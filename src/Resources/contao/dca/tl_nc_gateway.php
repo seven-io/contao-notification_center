@@ -2,15 +2,16 @@
 
 /**
  * @package   ContaoNotificationCenterBundle
- * @author    sms77 e.K. <support@sms77.io>
+ * @author    seven communications GmbH & Co. KG <support@seven.io>
  * @license   MIT
- * @copyright 2022-present sms77 e.K.
+ * @copyright 2022 sms77 e.K.
+ * @copyright 2023-present seven communications GmbH & Co. KG
  */
 
-$GLOBALS['TL_DCA']['tl_nc_gateway']['palettes']['sms77'] =
-    '{title_legend},title,type;{gateway_legend},sms77_apiKey';
+$GLOBALS['TL_DCA']['tl_nc_gateway']['palettes']['seven'] =
+    '{title_legend},title,type;{gateway_legend},seven_apiKey';
 
-$GLOBALS['TL_DCA']['tl_nc_gateway']['fields']['sms77_apiKey'] = [
+$GLOBALS['TL_DCA']['tl_nc_gateway']['fields']['seven_apiKey'] = [
     'eval' => [
         'mandatory' => true,
         'tl_class' => 'w50',

@@ -2,75 +2,76 @@
 
 /**
  * @package   ContaoNotificationCenterBundle
- * @author    sms77 e.K. <support@sms77.io>
+ * @author    seven communications GmbH & Co. KG <support@seven.io>
  * @license   MIT
- * @copyright 2022-present sms77 e.K.
+ * @copyright 2022 sms77 e.K.
+ * @copyright 2023-present seven communications GmbH & Co. KG
  */
 
-use Sms77\ContaoNotificationCenterBundle\NotificationCenter\Gateway\Sms77;
+use Seven\ContaoNotificationCenterBundle\NotificationCenter\Gateway\Seven;
 
-$GLOBALS['NOTIFICATION_CENTER']['GATEWAY']['sms77'] = Sms77::class;
+$GLOBALS['NOTIFICATION_CENTER']['GATEWAY']['seven'] = Seven::class;
 
 $GLOBALS['NOTIFICATION_CENTER']['NOTIFICATION_TYPE'] = array_merge_recursive(
     (array)$GLOBALS['NOTIFICATION_CENTER']['NOTIFICATION_TYPE'],
     [
         'contao' => [
             'core_form' => [
-                'sms77_recipient_number' => [
+                'seven_recipient_number' => [
                     'form_*',
                 ],
-                'sms77_text' => [
+                'seven_text' => [
                     'form_*',
                     'formconfig_*',
                     'raw_data',
                     'admin_email',
                 ],
-                'sms77_sender_name' => [
+                'seven_sender_name' => [
                     'form_*',
                 ],
             ],
             'member_registration' => [
-                'sms77_recipient_number' => [
+                'seven_recipient_number' => [
                     'member_mobile',
                     'member_phone',
                 ],
-                'sms77_text' => [
+                'seven_text' => [
                     'domain',
                     'link',
                     'member_*',
                     'admin_email',
                 ],
-                'sms77_sender_name' => [
+                'seven_sender_name' => [
                     'member_*',
                 ],
             ],
             'member_personaldata' => [
-                'sms77_recipient_number' => [
+                'seven_recipient_number' => [
                     'member_mobile',
                     'member_phone',
                 ],
-                'sms77_text' => [
+                'seven_text' => [
                     'domain',
                     'member_*',
                     'member_old_*',
                     'admin_email',
                 ],
-                'sms77_sender_name' => [
+                'seven_sender_name' => [
                     'member_*',
                 ],
             ],
             'member_password' => [
-                'sms77_recipient_number' => [
+                'seven_recipient_number' => [
                     'member_mobile',
                     'member_phone',
                 ],
-                'sms77_text' => [
+                'seven_text' => [
                     'domain',
                     'link',
                     'member_*',
                     'admin_email',
                 ],
-                'sms77_sender_name' => [
+                'seven_sender_name' => [
                     'member_*',
                 ],
             ],

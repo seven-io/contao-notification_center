@@ -2,7 +2,7 @@
 <xliff version="1.1">
     <file>
         <body>
-            <trans-unit id="ERR.sms77_invalid_sender">
+            <trans-unit id="ERR.seven_invalid_sender">
                 <target>The sender identifier may not exceed 11 alphanumeric or 16 numeric characters in length.</target>
             </trans-unit>
         </body>

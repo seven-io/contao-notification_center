@@ -2,13 +2,13 @@
 <xliff version="1.1">
     <file>
         <body>
-            <trans-unit id="tl_nc_gateway.type.sms77">
-                <target>SMS (sms77)</target>
+            <trans-unit id="tl_nc_gateway.type.seven">
+                <target>SMS (seven)</target>
             </trans-unit>
-            <trans-unit id="tl_nc_gateway.sms77_apiKey.0">
-                <target>sms77 API Key</target>
+            <trans-unit id="tl_nc_gateway.seven_apiKey.0">
+                <target>seven API Key</target>
             </trans-unit>
-            <trans-unit id="tl_nc_gateway.sms77_apiKey.1">
+            <trans-unit id="tl_nc_gateway.seven_apiKey.1">
                 <target>Please enter the required API key.</target>
             </trans-unit>
         </body>
