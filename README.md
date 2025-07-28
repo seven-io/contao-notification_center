@@ -1,5 +1,11 @@
 <img src="https://www.seven.io/wp-content/uploads/Logo.svg" width="250" />
 
+# ⚠️ DEPRECATED - No Longer Maintained
+
+**This plugin is no longer actively maintained.**
+
+---
+
 # seven for Contao Notification Center
 
 ## About
